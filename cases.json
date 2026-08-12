@@ -31,5 +31,16 @@
     "status": "Verified success",
     "summary": "The controller evicted superseded viewport pixels without adding a semantic summary. Bedrock accepted every request and Qwen completed all 12 required transitions on first proposals.",
     "path": "cases/qwen-d1-v4-success-003/"
+  },
+  {
+    "id": "qwen-d2-v2-memory-action-failure-011",
+    "title": "Qwen D2-v2 episode 011: state changed before reference evidence was acquired",
+    "model": "Qwen3-VL 235B",
+    "stage": "D2-v2 single-call memory action",
+    "contract": "C_pixel",
+    "category": "Framework behavior",
+    "status": "Observed failure",
+    "summary": "The single-call action component correctly recognized that the third card was the reference, but clicked CHANGE STATE before inspecting it. The third card then became V5. Qwen inspected that post-change card, stored V5 as the reference code, and terminally selected V5 instead of R2.",
+    "path": "cases/qwen-d2-v2-memory-action-failure-011/"
   }
 ]

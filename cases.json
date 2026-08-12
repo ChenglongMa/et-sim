@@ -42,5 +42,16 @@
     "status": "Observed failure",
     "summary": "The single-call action component correctly recognized that the third card was the reference, but clicked CHANGE STATE before inspecting it. The third card then became V5. Qwen inspected that post-change card, stored V5 as the reference code, and terminally selected V5 instead of R2.",
     "path": "cases/qwen-d2-v2-memory-action-failure-011/"
+  },
+  {
+    "id": "qwen-d3-v1-memory-policy-failure-006",
+    "title": "Qwen D3 episode 006: correct memory followed by an unsupported post-shuffle target claim",
+    "model": "Qwen3-VL 235B",
+    "stage": "D3-v1 policy to grounder",
+    "contract": "C_pixel",
+    "category": "Framework behavior",
+    "status": "Observed failure",
+    "summary": "The first policy requested evidence and Qwen read and retained code R2. After the fixture shuffled the cards, the final low-information overview withheld every code. The policy still remembered R2 but, without requesting new evidence, incorrectly claimed it was the third card. The grounder followed that exact policy, clicked the third card, and selected V5.",
+    "path": "cases/qwen-d3-v1-memory-policy-failure-006/"
   }
 ]

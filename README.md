@@ -2,7 +2,7 @@
 
 Interactive, evidence-bound eye-tracking simulation traces for research discussion.
 
-Site: https://chenglongma.github.io/et-sim/
+Site: https://chenglongma.com/et-sim/
 
 This public repository is a disclosure-reviewed static export. It intentionally excludes
 raw provider requests/responses, credentials, participant data, human outcomes, and

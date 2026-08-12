@@ -9,5 +9,6 @@ raw provider requests/responses, credentials, participant data, human outcomes, 
 formal-study data. Expected branches shown in the traces are explanatory
 counterfactuals; they do not alter frozen results.
 
-The site uses plain HTML, CSS, and JavaScript. It has no build-time package dependency,
-analytics, cookies, external assets, or server-side component.
+The site uses plain HTML, CSS, and JavaScript. The bundle has no build-time package
+dependency, analytics, cookies, external assets, or server-side component. The hosting
+domain may inject Cloudflare Web Analytics independently of this repository.

@@ -53,5 +53,16 @@
     "status": "Observed failure",
     "summary": "The first policy requested evidence and Qwen read and retained code R2. After the fixture shuffled the cards, the final low-information overview withheld every code. The policy still remembered R2 but, without requesting new evidence, incorrectly claimed it was the third card. The grounder followed that exact policy, clicked the third card, and selected V5.",
     "path": "cases/qwen-d3-v1-memory-policy-failure-006/"
+  },
+  {
+    "id": "qwen-recgaze-transfer-v1-image-envelope-failure-003",
+    "title": "RecGaze transfer episode 003: second inspect exceeded the frozen image-count envelope",
+    "model": "Qwen3-VL 235B",
+    "stage": "RecGaze real-task transfer — S2",
+    "contract": "C_pixel",
+    "category": "Technical boundary",
+    "status": "Technical failure",
+    "summary": "S2 executed two inspect actions on the real RecGaze training UI. The next C_pixel policy request required the current overview plus both retained sharp crops, exceeding the frozen two-image limit even though raw image bytes stayed below their ceiling. The guard correctly prevented the request, leaving the paid block incomplete at 3 of 72 episodes. This is an instrument failure, not evidence that the model or S2 failed the browsing task.",
+    "path": "cases/qwen-recgaze-transfer-v1-image-envelope-failure-003/"
   }
 ]

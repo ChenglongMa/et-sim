@@ -75,5 +75,16 @@
     "status": "Observed failure",
     "summary": "S1 made seven valid inspect actions and one valid downward scroll on the real RecGaze training UI. It kept evaluating candidates and used action eight for another inspect, leaving no later turn to select a movie or deliberately stop. The predeclared rule therefore made the 72-episode workflow comparison capacity-limited and inconclusive. This records the interaction between S1's search/stopping behavior and an arbitrary eight-action capacity boundary; it does not label its movie beliefs as objective errors or imply that people could not behave similarly.",
     "path": "cases/qwen-recgaze-transfer-v2-s1-capacity-failure-016/"
+  },
+  {
+    "id": "qwen-recgaze-transfer-v2-s2-policy-schema-failure-015",
+    "title": "RecGaze S2 episode 015: incompatible direction invalidated the first policy proposal",
+    "model": "Qwen3-VL 235B",
+    "stage": "RecGaze real-task transfer — S2",
+    "contract": "C_pixel",
+    "category": "Framework interface",
+    "status": "Observed failure",
+    "summary": "The first S2 policy-stage Qwen output paired navigate_horizontal with direction down, an invalid enum combination. The validator retained it and returned only the predeclared generic format message. Qwen then changed the policy to navigate_vertical/down; the grounding-stage Qwen call produced a scroll, and the episode later selected a movie. This one event made policy-stage first-proposal schema validity 97/98, below 0.99. It is an interface conformance failure, not a technical-missing episode or proof that S2 could not complete the task.",
+    "path": "cases/qwen-recgaze-transfer-v2-s2-policy-schema-failure-015/"
   }
 ]

@@ -64,5 +64,16 @@
     "status": "Technical failure",
     "summary": "S2 executed two inspect actions on the real RecGaze training UI. The next C_pixel policy request required the current overview plus both retained sharp crops, exceeding the frozen two-image limit even though raw image bytes stayed below their ceiling. The guard correctly prevented the request, leaving the paid block incomplete at 3 of 72 episodes. This is an instrument failure, not evidence that the model or S2 failed the browsing task.",
     "path": "cases/qwen-recgaze-transfer-v1-image-envelope-failure-003/"
+  },
+  {
+    "id": "qwen-recgaze-transfer-v2-s1-capacity-failure-016",
+    "title": "RecGaze S1 episode 016: evidence search reached the eight-action ceiling",
+    "model": "Qwen3-VL 235B",
+    "stage": "RecGaze real-task transfer — S1",
+    "contract": "C_pixel",
+    "category": "Capacity boundary",
+    "status": "Observed failure",
+    "summary": "S1 made seven valid inspect actions and one valid downward scroll on the real RecGaze training UI. It kept evaluating candidates and used action eight for another inspect, leaving no later turn to select a movie or deliberately stop. The predeclared rule therefore made the 72-episode workflow comparison capacity-limited and inconclusive. This records the interaction between S1's search/stopping behavior and an arbitrary eight-action capacity boundary; it does not label its movie beliefs as objective errors or imply that people could not behave similarly.",
+    "path": "cases/qwen-recgaze-transfer-v2-s1-capacity-failure-016/"
   }
 ]

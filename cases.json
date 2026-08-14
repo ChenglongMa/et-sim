@@ -97,5 +97,16 @@
     "status": "Frozen failure",
     "summary": "Qwen located the correct movie and stated the need to show its on-card details, but returned click instead of hover. The exact-target click terminally selected the movie before details appeared; the same action mismatch occurred in all nine targeted-hover episodes.",
     "path": "cases/qwen-recgaze-screen00-g15a24-hover-failure-001/"
+  },
+  {
+    "id": "qwen-recgaze-screen00-g15a26-previous-control-miss-cnative-019",
+    "title": "RecGaze objective gate: previous-control miss and wrong selection (C_native)",
+    "model": "Qwen3-VL 235B",
+    "stage": "Common screen-00 objective gate — Qwen S1 v3",
+    "contract": "C_native",
+    "category": "State-transition grounding",
+    "status": "Frozen failure",
+    "summary": "After four valid downward scrolls, Qwen aimed at the Thriller row's previous control, but the click landed above it and left segment 1 unchanged. It then assumed the transition succeeded and selected movie 5 instead of required movie 15. This is one of two failures in an independently verified 40/42 eligible gate.",
+    "path": "cases/qwen-recgaze-screen00-g15a26-previous-control-miss-cnative-019/"
   }
 ]

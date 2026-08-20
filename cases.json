@@ -119,5 +119,16 @@
     "status": "Frozen failure",
     "summary": "After four valid downward scrolls, Qwen aimed at the Thriller row's previous control, but the click landed above it and left segment 1 unchanged. It then assumed the transition succeeded and selected movie 5 instead of required movie 15. This is one of two failures in an independently verified 40/42 eligible gate.",
     "path": "cases/qwen-recgaze-screen00-g15a26-previous-control-miss-ctext-022/"
+  },
+  {
+    "id": "ao-variable-rectangle-readability-failure-v1",
+    "title": "AO readability gate: two lower-page crops failed exact-code recovery",
+    "model": "No provider model (RapidOCR local proxy)",
+    "stage": "AO pre-execution readability gate",
+    "contract": "C_pixel candidate",
+    "category": "Observation validity",
+    "status": "Pre-execution failure",
+    "summary": "The fixed local readability gate recovered four of six synthetic codes. Two lower-page crops failed, independent verification matched, and AO stopped before any provider request or model episode.",
+    "path": "cases/ao-variable-rectangle-readability-failure-v1/"
   }
 ]
